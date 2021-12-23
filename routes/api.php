@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+    // cursos // alunos // matriculas
+
+Route::apiResource('cursos', \App\Http\Controllers\Api\CursoController::class);
+Route::apiResource('alunos', \App\Http\Controllers\Api\AlunoController::class);
+Route::apiResource('matriculas', \App\Http\Controllers\Api\MatriculaController::class);

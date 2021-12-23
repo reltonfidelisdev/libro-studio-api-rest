@@ -14,7 +14,9 @@ class MatriculaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            // ['aluno_id', 'curso_id']
+            'aluno_id' => null,
+            'curso_id' => null,
         ];
     }
 }

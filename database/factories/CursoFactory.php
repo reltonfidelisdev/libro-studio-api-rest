@@ -14,7 +14,8 @@ class CursoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'titulo' => $this->faker->words(5, true),
+            'descricao' => $this->faker->sentence
         ];
     }
 }

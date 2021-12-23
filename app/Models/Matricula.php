@@ -13,7 +13,7 @@ class Matricula extends Model
 
     public function curso()
     {
-        return $this->hasMany(Cursos::class); // curso_id
+        return $this->hasMany(Curso::class); // curso_id
     }
 
     public function aluno()

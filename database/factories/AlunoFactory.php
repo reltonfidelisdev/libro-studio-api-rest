@@ -14,7 +14,10 @@ class AlunoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => $this->faker->words(3, true),
+            'email' => $this->faker->unique()->safeEmail,
+            'sexo' => 'F',
+            'data_nascimento' => $this->faker->date()
         ];
     }
 }
