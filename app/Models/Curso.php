@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Curso extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['titulo', 'descricao'];
+
+    public function matricula()
+    {
+        return $this->belongsTo(Matricula::class);
+    }
 }

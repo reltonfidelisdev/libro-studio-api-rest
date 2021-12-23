@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Aluno extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['nome', 'email', 'sexo', 'data_nascimento'];
+
+    public function matricula()
+    {
+        return $this->belongsTo(Matricula::class);
+    }
 }
