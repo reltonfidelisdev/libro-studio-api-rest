@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Aluno;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('cursos', \App\Http\Controllers\Api\CursoController::class);
 Route::apiResource('alunos', \App\Http\Controllers\Api\AlunoController::class);
 Route::apiResource('matriculas', \App\Http\Controllers\Api\MatriculaController::class);
+

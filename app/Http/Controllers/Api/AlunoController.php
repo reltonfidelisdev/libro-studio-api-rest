@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Aluno;
@@ -70,5 +71,19 @@ class AlunoController extends Controller
     public function destroy(Aluno $aluno)
     {
         return $aluno->delete($aluno->id);
+    }
+
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  Aluno  $aluno
+     * @return \Illuminate\Http\Response
+     */
+    public function buscarAlunoPorNomeOuEmail($nomeOuEmail)
+    {
+        return Aluno::where('email', '=', $nomeOuEmail)
+                    ->orWhere('nome', 'like', '%'.$nomeOuEmail.'%')
+                        ->get();
     }
 }
