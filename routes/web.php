@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/buscar-aluno-nome-email/{NomeOuEmail}', [AlunoController::class, 'buscarAlunoPorNomeOuEmail']);
+Route::get('/relatorio-alunos-cursos', [AlunoController::class, 'totalAlunos']);
