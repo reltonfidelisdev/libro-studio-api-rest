@@ -85,6 +85,11 @@ PUT|PATCH /api/matriculas/ [Atualiza a matrícula de um aluno em um curso]
 ```shell
 DELETE /api/matriculas/ [Deleta a matrícula de um aluno em um curso]
 ```
+#### Se você quiser, pode ver todos os endpoints do projeto direto no seu prompt/shell
+Para isso, acesse a pasta do projeto em um termal e em seguida rode o comando
+```shell
+php artisan route:list
+```
 
 ### Esta é uma api bem simples, conforme foi pedido e eu tentei ao máximo entregar o aque foi proposto, mantendo um código limpo, de fácil entendimento, manutenção e evolução.
 Como foi um teste pra ser entrege muito rápido, não tive tempo de fazer outras coisas, como validação nem muita cobertura com testes unitários. Por isso, alguma parte pode não funcionar conforme o esperedo.
