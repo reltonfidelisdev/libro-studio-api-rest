@@ -19,6 +19,10 @@ Em seguida execute o seguinte comando
 ```shell
 create database  `libro_studio_api`;
 ```
+Assumindo que você usará o MySQL com Banco de dados, o próximo passo é informar ao laravel quais as credenciais do banco de dados, para isso, abra o arquivo .env na raíz do projeto e altere as seguintes linhas:
+DB_DATABASE=libro_studio_api
+DB_USERNAME=coloque_o_usuario_do_banco
+DB_PASSWORD=cloque_a_senha_do_seu_banco
 
 Precisamos executar as migrations para criar a estrutura das tabelas no banco de dados.
 No terminal, dentro da pasta do projeto, execute o seguinte comando:
@@ -63,3 +67,22 @@ PUT|PATCH /api/cursos/ [Atualiza um curso no sistema]
 ```shell
 DELETE /api/cursos/ [Deleta um aluno no sistema]
 ```
+###### Para as matrículas temos os seguintes endpoints:
+```shell
+GET /api/matriculas/ [Retorna todo os alunos matruculados sistema]
+```
+
+```shell
+POST /api/matriculas/ [Realiza a matrícula de um aluno em um curso]
+```
+```shell
+PUT|PATCH /api/matriculas/ [Atualiza a matrícula de um aluno em um curso]
+```
+```shell
+DELETE /api/matriculas/ [Deleta a matrícula de um aluno em um curso]
+```
+
+### Esta é uma api bem simples, conforme foi pedido e eu tentei ao máximo entregar o aque foi proposto, mantendo um código limpo, de fácil entendimento, manutenção e evolução.
+Como foi um teste pra ser entrege muito rápido, não tive tempo de fazer outras coisas, como validação nem muita cobertura com testes unitários. Por isso, alguma parte pode não funcionar conforme o esperedo.
+..
+Caso encontre alguma dificuldade pra rodar o projeto, pode me chamar que eu dou um help. Meu linkedin é: https://www.linkedin.com/in/reltonfidelis/
