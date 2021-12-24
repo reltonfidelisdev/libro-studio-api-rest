@@ -19,10 +19,14 @@ Em seguida execute o seguinte comando
 ```shell
 create database  `libro_studio_api`;
 ```
-Assumindo que você usará o MySQL com Banco de dados, o próximo passo é informar ao laravel quais as credenciais do banco de dados, para isso, abra o arquivo .env na raíz do projeto e altere as seguintes linhas:
-DB_DATABASE=libro_studio_api
-DB_USERNAME=coloque_o_usuario_do_banco
-DB_PASSWORD=cloque_a_senha_do_seu_banco
+Assumindo que você usará o MySQL com Banco de dados, o próximo passo é informar ao laravel quais as credenciais do banco de dados, para isso, 
+###### abra o arquivo .env.example na raíz do projeto e altere as seguintes linhas:
+
+DB_DATABASE=libro_studio_api <br />
+DB_USERNAME=coloque_o_usuario_do_banco <br />
+DB_PASSWORD=cloque_a_senha_do_seu_banco <br />
+
+###### Agora salve esse arquivos com o nome .env
 
 Precisamos executar as migrations para criar a estrutura das tabelas no banco de dados.
 No terminal, dentro da pasta do projeto, execute o seguinte comando:
