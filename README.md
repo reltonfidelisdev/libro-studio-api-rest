@@ -43,7 +43,9 @@ No terminal, dentro da pasta do projeto, execute o seguinte comando:
 ```shell
 php artisan migrate
 ```
-
+#### Caso você queira ver o código das três tabelas antes de rodar o comando
+Dentro da pasta database existe um script sql com o código de criação utilizado na hora de crar as tabelas, ele pode ser útil caso você precise saber o nome dos campos 
+...
 Este software representa a API backend do sistema de gestão de matrícula dos alunos em cursos, dessa forma, temos como entidades relacionais do banco de daods alunos, cursos e matrículas.
 
 #### Os endpoints da API estão de acordo com o conceito de API's Rest e respondem de acordo com o verbo http utilizado pelo cliente.
