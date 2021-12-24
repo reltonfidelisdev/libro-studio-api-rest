@@ -56,9 +56,9 @@ class AlunoController extends Controller
      * @param  Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,Aluno $aluno)
+    public function update(Request $request, Aluno $aluno)
     {
-          $aluno->update($request->all());
+        $aluno->update($request->all());
         return $aluno;
     }
 
@@ -83,13 +83,14 @@ class AlunoController extends Controller
     public function buscarAlunoPorNomeOuEmail($nomeOuEmail)
     {
         return Aluno::where('email', '=', $nomeOuEmail)
-                    ->orWhere('nome', 'like', '%'.$nomeOuEmail.'%')
-                        ->get();
+            ->orWhere('nome', 'like', '%' . $nomeOuEmail . '%')
+            ->get();
     }
 
     // Uma requisição que informe o total de alunos por
     // faixa etária
-    public function totalAlunos(){
+    public function totalAlunos()
+    {
         $alunos = DB::select('SELECT
                                 TIMESTAMPDIFF(YEAR,a.data_nascimento, now()) as idade,
                                 a.nome, a.sexo, c.titulo as curso, c.id as id_curso, a.id as id_aluno from alunos as a
@@ -98,9 +99,13 @@ class AlunoController extends Controller
                                 order by(c.id and a.sexo)
                                 ');
         $alunosOrdenados = [];
-        $cont1=0; $cont2=0; $cont3=0; $cont4=0; $cont5=0;
+        $cont1 = 0;
+        $cont2 = 0;
+        $cont3 = 0;
+        $cont4 = 0;
+        $cont5 = 0;
 
-        foreach($alunos as $key => $value){
+        foreach ($alunos as $key => $value) {
 
             // ○ Menor que 15 anos
             if ($value->idade <= 15) {
@@ -131,11 +136,8 @@ class AlunoController extends Controller
                 $alunosOrdenados['30_ANOS_OU_MAIS'][$cont5++] = $value;
                 $alunosOrdenados['TOTAL_DE_ALUNOS_ACIMA_DE_30'] = $cont5;
             }
-
-
         }
         return $alunosOrdenados;
-
     }
     // separados por curso
     // e sexo
