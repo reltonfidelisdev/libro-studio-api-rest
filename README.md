@@ -5,31 +5,47 @@
 A Libro Studio deseja lançar uma nova plataforma de ensino online, onde desejamos
 realizar a matrícula de alunos em cursos, através de um painel administrativo.
 
-## Como iniciar o projeto
-Após fazer o clono do repositório para a sua máquina ou para seu servidor web, siga as instruções abaixo para criar a estrutura do banco de dados.
+## Instalando as dependências do projeto
+Antes de tudo, precisamos instalar outros programas que fazem parte do projeto mas não são armazenados no GitHub.
+Neste passo, você deve ter o composer instalado na sua máquina. Caso você não tenha, visite o site oficial e faça a instalação.
+<br />
+O site é esse aqui: https://getcomposer.org/
+<br />
+Tendo o composer funcionando, basta acessar a pasta do projeto em um terminal e rodar o segunte comando:
+```shell
+composer install
+```
+
+## Configurando o banco de daos
+Após fazer o clone do repositório para a sua máquina ou para seu servidor web, siga as instruções abaixo para criar a estrutura do banco de dados.
 
 ### Crie o banco de dados libro_studio_api
-use sua ferramenta de preferida para acessar o mysql e crie um banco de dados com o nome de 
+Use sua ferramenta de preferida para acessar o mysql e crie um banco de dados com o nome de 
 libro_studio_api
 Se usar o terminal e digitar: mysql -u root -p
 Digitar a senha quando for solicitado
 Em seguida execute o seguinte comando
 
-
 ```shell
 create database  `libro_studio_api`;
 ```
-Assumindo que você usará o MySQL com Banco de dados, o próximo passo é informar ao laravel quais as credenciais do banco de dados, para isso, abra o arquivo .env na raíz do projeto e altere as seguintes linhas:
-DB_DATABASE=libro_studio_api
-DB_USERNAME=coloque_o_usuario_do_banco
-DB_PASSWORD=cloque_a_senha_do_seu_banco
+Assumindo que você usará o MySQL com Banco de dados, o próximo passo é informar ao laravel quais as credenciais do banco de dados, para isso, 
+###### abra o arquivo .env.example na raíz do projeto e altere as seguintes linhas:
+
+DB_DATABASE=libro_studio_api <br />
+DB_USERNAME=coloque_o_usuario_do_banco <br />
+DB_PASSWORD=cloque_a_senha_do_seu_banco <br />
+
+###### Agora salve esse arquivos com o nome .env
 
 Precisamos executar as migrations para criar a estrutura das tabelas no banco de dados.
 No terminal, dentro da pasta do projeto, execute o seguinte comando:
 ```shell
 php artisan migrate
 ```
-
+#### Caso você queira ver o código das três tabelas antes de rodar o comando
+Dentro da pasta database existe um script sql com o código de criação utilizado na hora de crar as tabelas, ele pode ser útil caso você precise saber o nome dos campos 
+...
 Este software representa a API backend do sistema de gestão de matrícula dos alunos em cursos, dessa forma, temos como entidades relacionais do banco de daods alunos, cursos e matrículas.
 
 #### Os endpoints da API estão de acordo com o conceito de API's Rest e respondem de acordo com o verbo http utilizado pelo cliente.
@@ -80,6 +96,11 @@ PUT|PATCH /api/matriculas/ [Atualiza a matrícula de um aluno em um curso]
 ```
 ```shell
 DELETE /api/matriculas/ [Deleta a matrícula de um aluno em um curso]
+```
+#### Se você quiser, pode ver todos os endpoints do projeto direto no seu prompt/shell
+Para isso, acesse a pasta do projeto em um termal e em seguida rode o comando
+```shell
+php artisan route:list
 ```
 
 ### Esta é uma api bem simples, conforme foi pedido e eu tentei ao máximo entregar o aque foi proposto, mantendo um código limpo, de fácil entendimento, manutenção e evolução.
