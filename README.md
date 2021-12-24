@@ -5,16 +5,26 @@
 A Libro Studio deseja lançar uma nova plataforma de ensino online, onde desejamos
 realizar a matrícula de alunos em cursos, através de um painel administrativo.
 
-## Como iniciar o projeto
-Após fazer o clono do repositório para a sua máquina ou para seu servidor web, siga as instruções abaixo para criar a estrutura do banco de dados.
+## Instalando as dependências do projeto
+Antes de tudo, precisamos instalar outros programas que fazem parte do projeto mas não são armazenados no GitHub.
+Neste passo, você deve ter o composer instalado na sua máquina. Caso você não tenha, visite o site oficial e faça a instalação.
+<br />
+O site é esse aqui: https://getcomposer.org/
+<br />
+Tendo o composer funcionando, basta acessar a pasta do projeto em um terminal e rodar o segunte comando:
+```shell
+composer install
+```
+
+## Configurando o banco de daos
+Após fazer o clone do repositório para a sua máquina ou para seu servidor web, siga as instruções abaixo para criar a estrutura do banco de dados.
 
 ### Crie o banco de dados libro_studio_api
-use sua ferramenta de preferida para acessar o mysql e crie um banco de dados com o nome de 
+Use sua ferramenta de preferida para acessar o mysql e crie um banco de dados com o nome de 
 libro_studio_api
 Se usar o terminal e digitar: mysql -u root -p
 Digitar a senha quando for solicitado
 Em seguida execute o seguinte comando
-
 
 ```shell
 create database  `libro_studio_api`;
