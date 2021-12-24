@@ -32,7 +32,7 @@ php artisan migrate
 
 Este software representa a API backend do sistema de gestão de matrícula dos alunos em cursos, dessa forma, temos como entidades relacionais do banco de daods alunos, cursos e matrículas.
 
-#### Os endpoints da API estrão de acordo com o conceito de API's Rest e respondem de acordo com o verbo http utilizado pelo cliente.
+#### Os endpoints da API estão de acordo com o conceito de API's Rest e respondem de acordo com o verbo http utilizado pelo cliente.
 ### Todas as respostas são enviadas no formato JSON.
 ###### Para os alunos temos os seguintes endpoints:
 ```shell
